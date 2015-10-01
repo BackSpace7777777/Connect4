@@ -1,22 +1,40 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package src;
 
-/**
- *
- * @author tyle4760
- */
-public class Main {
+import java.awt.Graphics;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 
-    /**
-     * @param args the command line arguments
-     */
+public class Main {
+    public static JFrame frame=new JFrame();
+    public static JPanel panel;
     public static void main(String[] args) {
-        // TODO code application logic here
+        frame.setSize(600,600);
+        frame.setLayout(null);
+        frame.setDefaultCloseOperation(3);
+        frame.setTitle("Connect 4");
+        frame.setResizable(false);
+        panel=new JPanel()
+        {
+            public void paintComponent(Graphics g)
+            {//Board is 7x6
+                super.paintComponent(g);
+                g.clearRect(0,0,panel.getWidth(),panel.getHeight());
+                
+                drawBoardFore(g);
+                repaint();
+            }
+        };
+        panel.setBounds(0,0,frame.getWidth(),frame.getHeight());
+        frame.add(panel);
+        frame.setVisible(true);
+    }
+    private static void drawBoardBack(Graphics g)
+    {
+        
+    }
+    private static void drawBoardFore(Graphics g)
+    {
+        
     }
     
 }
