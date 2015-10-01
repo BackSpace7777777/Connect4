@@ -16,7 +16,7 @@ public class Main {
         panel=new JPanel()
         {
             public void paintComponent(Graphics g)
-            {//Board is 7x6
+            {//Board is 7x6 http://docs.oracle.com/javase/tutorial/networking/sockets/index.html
                 super.paintComponent(g);
                 g.clearRect(0,0,panel.getWidth(),panel.getHeight());
                 
