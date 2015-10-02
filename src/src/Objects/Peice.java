@@ -37,7 +37,7 @@ public class Peice {
                         y-=1;
                     }
                     try {
-                        Thread.sleep(10);
+                        Thread.sleep(5);
                     } catch (InterruptedException ex) {}
                 }
             }

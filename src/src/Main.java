@@ -34,18 +34,6 @@ public class Main {
                 RF(g);
                 gl.draw(g);
                 board.draw(g);
-                g.setColor(Color.GREEN);
-                g.fillRect(0,50,91,10);
-                g.setColor(Color.RED);
-                g.fillRect(91,50,91,10);
-                g.setColor(Color.BLACK);
-                g.fillRect(91*2,50,91,10);
-                g.setColor(Color.GREEN);
-                g.fillRect(91*3,50,91,10);
-                g.setColor(Color.RED);
-                g.fillRect(91*4,50,91,10);
-                g.setColor(Color.BLACK);
-                g.fillRect(91*5,50,91,10);
                 repaint();
             }
         };

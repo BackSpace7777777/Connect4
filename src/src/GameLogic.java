@@ -24,14 +24,23 @@ public class GameLogic {
             if(p[i]==null)
             {
                 p[i]=new Peice(0,mouseToSlot(x),-1);
-                determine(p[i]);
+                determine(p[i],x);
                 break;
             }
         }
     }
-    private void determine(Peice pe)
+    private void determine(Peice pe,int x)
     {
-        
+        pe.setMoveable(mouseToSlot(x), -1);
+        for(int i=5;i>=0;i--)
+        {
+            if(holding[mouseToSlot(x)][i]==false)
+            {
+                holding[mouseToSlot(x)][i]=true;
+                pe.moveTo(mouseToSlot(x), i);
+                break;
+            }
+        }
     }
     public int mouseToSlot(int x)
     {
